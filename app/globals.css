@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+	color: white;
+	background-color: black;
+}
+
+.gradient {
+	background: #0f0c29; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#0f0c29,
+		#302b63,
+		#24243e
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#0f0c29,
+		#302b63,
+		#24243e
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@layer utilities {
+	.no-focus {
+		@apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+	}
+
+	.videos-container {
+		@apply grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 mt-6 gap-x-6 gap-y-14;
+	}
+	.navbar__menu-button {
+		@apply p-2 rounded-3xl transition hover:bg-neutral-800 flex justify-center items-center;
+	}
+
+	.flex-center {
+		@apply flex justify-center items-center;
+	}
+
+	.icon_4 {
+		@apply h-4 w-4;
+	}
+
+	.icon_5 {
+		@apply h-5 w-5;
+	}
+
+	.icon_6 {
+		@apply h-6 w-6;
+	}
+	.icon_8 {
+		@apply w-8 h-8;
+	}
+	.button-main {
+		@apply bg-indigo-700 text-sm py-2 px-5 rounded-3xl text-zinc-200  flex-center gap-1.5 border border-indigo-600;
+	}
+
+	.player__icon {
+		@apply h-[30px] w-[30px];
+	}
+	.volume-icon {
+		@apply h-[32px] w-[32px] hover:opacity-80 transition;
+	}
+}
+
+/* default dark theme */
+@layer base {
+	:root {
+		--border: 215 27.9% 16.9%;
+		--background: 240 10% 3.9%;
+		--foreground: 0 0% 98%;
+		--card: 240 10% 3.9%;
+		--card-foreground: 0 0% 98%;
+		--popover: 240 10% 3.9%;
+		--popover-foreground: 0 0% 98%;
+		--primary: 0 0% 98%;
+		--primary-foreground: 240 5.9% 10%;
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 240 3.7% 15.9%;
+		--muted-foreground: 240 5% 64.9%;
+		--accent: 240 3.7% 15.9%;
+		--accent-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+		--input: 240 3.7% 15.9%;
+		--ring: 240 4.9% 83.9%;
+	}
+}
+@layer base {
+	body {
+		@apply bg-background text-foreground;
+	}
+}
