@@ -23,7 +23,7 @@ const FilterVideos = ({videosLength}: Props) => {
 
 		const url = window.location.pathname + `?sort=${value}`;
 
-		router.push(url, {scroll: false});
+		return router.push(url, {scroll: false});
 	};
 
 	useEffect(() => {

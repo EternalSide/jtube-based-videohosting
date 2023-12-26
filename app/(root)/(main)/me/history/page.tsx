@@ -41,7 +41,7 @@ const WatchedHistory = async ({searchParams}: Props) => {
 							userId={userId!}
 							containerClassNames='grid 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-2 mt-6 gap-x-6 gap-y-14'
 							loadingClassNames='grid 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-2 mt-14 gap-x-6 gap-y-14'
-							skeletonLength={3}
+							skeletonLength={12}
 						/>
 					) : (
 						<div className='mt-6 text-zinc-400'>Ничего не найдено.</div>

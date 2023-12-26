@@ -41,6 +41,11 @@ const InfiniteScroll = ({
 	const [initialVideos, setInitialVideos] = useState([...videos]);
 
 	useEffect(() => {
+		// @ts-ignore
+		setInitialVideos([...videos]);
+	}, [videos]);
+
+	useEffect(() => {
 		if (inView) {
 			loadData();
 		}
@@ -147,7 +152,7 @@ const InfiniteScroll = ({
 				break;
 		}
 	};
-
+	console.log(videos);
 	return (
 		<>
 			<div className={containerClassNames}>
