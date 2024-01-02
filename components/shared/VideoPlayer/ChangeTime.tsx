@@ -1,10 +1,10 @@
 "use client";
-
 import {StepBack, StepForward} from "lucide-react";
 import ActionTooltip from "../ActionTooltip";
 import {usePlayer} from "@/hooks/usePlayer";
+import {ChildrenProps} from "@/constants/types/index.shared";
 
-const ChangeTime = ({children}: any) => {
+const ChangeTime = ({children}: ChildrenProps) => {
 	const {handleChangeTime} = usePlayer();
 	return (
 		<>

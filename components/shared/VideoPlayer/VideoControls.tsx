@@ -1,4 +1,3 @@
-"use client";
 import VideoPause from "./VideoPause";
 import VideoSpeed from "./VideoSpeed";
 import Volume from "./Volume";
@@ -24,9 +23,7 @@ const VideoControls = ({videoData, isHover, progressBarRef}: Props) => {
 	return (
 		<div
 			ref={progressBarRef}
-			className={`h-[55px] absolute bottom-0 left-0 w-full z-[2500] invisible opacity-0 transition-all duration-100 ${
-				isHover && "!opacity-100 !visible"
-			}`}
+			className={`progress-bar ${isHover && "!opacity-100 !visible"}`}
 		>
 			<VideoProgressBar videoUrl={videoData.videoUrl} />
 			<div className='flex px-4 justify-between items-center h-full'>

@@ -103,7 +103,6 @@ const VideoHeader = ({
 							inWatchedList={inWatchedList}
 							videoId={videoId}
 						/>
-
 						<CopyAction />
 						<OpenPlaylistModalAction
 							videoId={videoId}

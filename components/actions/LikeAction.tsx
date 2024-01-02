@@ -28,7 +28,10 @@ const LikeAction = ({
 	const onClick = async (type: "like" | "dislike") => {
 		try {
 			if (!currentUserId) {
-				return toast({title: "Войдите, чтобы оставить комментарий"});
+				return toast({
+					title: "Войдите, чтобы оценить видео",
+					variant: "destructive",
+				});
 			}
 
 			await handleLikeAction({

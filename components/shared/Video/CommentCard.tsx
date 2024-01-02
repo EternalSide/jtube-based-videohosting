@@ -77,6 +77,7 @@ const CommentCard = ({
 			if (!userId) {
 				return toast({
 					title: "Вы не авторизованы",
+					variant: "destructive",
 				});
 			}
 			if (action === "like") {

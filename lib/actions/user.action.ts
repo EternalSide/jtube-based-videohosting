@@ -98,7 +98,7 @@ export const getWatchedHistory = async (params: GetWatchedHistoryParams) => {
 
 		const {userId, searchParams, page} = params;
 
-		let pageLimit = 6;
+		let pageLimit = 12;
 		console.log(page);
 		// @ts-ignore
 		let skipAmount = (page - 1) * pageLimit;

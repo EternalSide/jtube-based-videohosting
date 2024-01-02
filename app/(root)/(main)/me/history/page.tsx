@@ -30,8 +30,19 @@ const WatchedHistory = async ({searchParams}: Props) => {
 	return (
 		<div className='flex gap-3 max-lg:flex-col-reverse'>
 			<div className='flex-1'>
-				<div className='flex justify-between items-center w-full'>
+				<div className='flex justify-between items-center w-full max-lg:flex-col max-lg:items-start max-lg:gap-3'>
 					<h1 className='text-3xl font-semibold'>История просмотра</h1>
+					<SearchComponent placeholder='Поиск в истории' />
+				</div>
+				<div className='flex items-center justify-center max-sm:flex-col max-sm:items-start max-lg:gap-1.5 gap-6'>
+					<ClearUserHistory
+						historyLength={history.length}
+						userId={id}
+					/>
+					<SaveHistory
+						isSavingHistory={isSavingHistory}
+						userId={id}
+					/>
 				</div>
 				{isSavingHistory ? (
 					history.length > 0 ? (
@@ -39,9 +50,9 @@ const WatchedHistory = async ({searchParams}: Props) => {
 							videos={history}
 							page='historyPage'
 							userId={userId!}
-							containerClassNames='grid 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-2 mt-6 gap-x-6 gap-y-14'
-							loadingClassNames='grid 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-2 mt-14 gap-x-6 gap-y-14'
-							skeletonLength={12}
+							containerClassNames='videos-container'
+							loadingIcon={true}
+							loadingClassNames='my-10'
 						/>
 					) : (
 						<div className='mt-6 text-zinc-400'>Ничего не найдено.</div>
@@ -50,7 +61,7 @@ const WatchedHistory = async ({searchParams}: Props) => {
 					<div className='mt-6 text-zinc-400'>История не сохраняется.</div>
 				)}
 			</div>
-			<div className='lg:w-[330px] w-full max-lg:mx-auto flex items-end max-lg:items-center flex-col gap-3 max-lg:mb-6'>
+			{/* <div className='lg:w-[330px] w-full max-lg:mx-auto flex items-end max-lg:items-center flex-col gap-3 max-lg:mb-6'>
 				<SearchComponent placeholder='Поиск в истории' />
 				<div className='flex flex-col items-end max-lg:items-center max-lg:flex-row max-sm:flex-col max-sm:items-start max-sm:mr-auto'>
 					<ClearUserHistory
@@ -62,7 +73,7 @@ const WatchedHistory = async ({searchParams}: Props) => {
 						userId={id}
 					/>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

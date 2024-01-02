@@ -24,6 +24,7 @@ const WatchLaterAction = ({inWatchedList, currentUserId, videoId}: Props) => {
 		if (!currentUserId)
 			return toast({
 				title: "Вы не авторизованы",
+				variant: "destructive",
 			});
 		toast({
 			description: optimisticInWatchedL

@@ -28,6 +28,7 @@ const FollowAction = ({
 		if (!currentUserId)
 			return toast({
 				title: "Вы не авторизованы",
+				variant: "destructive",
 			});
 
 		addOptimisticFollowing((current: boolean) => !current);

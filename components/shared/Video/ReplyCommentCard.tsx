@@ -42,7 +42,7 @@ const ReplyCommentCard = ({
 
 	const onClick = async (action: "like" | "dislike") => {
 		if (!userId) {
-			return toast({title: "Вы не авторизованы"});
+			return toast({title: "Вы не авторизованы", variant: "destructive"});
 		}
 
 		setIsLoading(true);

@@ -65,6 +65,10 @@ body,
 	.volume-icon {
 		@apply h-[32px] w-[32px] hover:opacity-80 transition;
 	}
+
+	.progress-bar {
+		@apply h-[55px] absolute bottom-0 left-0 w-full z-[2500] invisible opacity-0 transition-all duration-100;
+	}
 }
 
 /* default dark theme */

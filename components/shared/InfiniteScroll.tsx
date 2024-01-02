@@ -152,7 +152,7 @@ const InfiniteScroll = ({
 				break;
 		}
 	};
-	console.log(videos);
+
 	return (
 		<>
 			<div className={containerClassNames}>

@@ -11,7 +11,7 @@ const NewVideosPage = async () => {
 			<p className='text-base text-zinc-400 mt-2'>
 				Видео, которые были опубликованы недавно.
 			</p>
-			<div className='grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 mt-6 gap-x-6 gap-y-14'>
+			<div className='videos-container'>
 				{newVideos?.length > 0 ? (
 					newVideos.map((video: any) => (
 						<VideoCardMe

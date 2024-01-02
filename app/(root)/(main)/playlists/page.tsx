@@ -22,7 +22,7 @@ const PlayListsPage = async () => {
 					playlists.map((item: any) => (
 						<Link
 							href={`playlist/${item._id.toString()}`}
-							className='bg-black border border-border rounded-md flex flex-col p-6 gap-5'
+							className='bg-black border border-border rounded-md flex flex-col p-7 gap-5'
 							key={item._id}
 						>
 							<NextImage

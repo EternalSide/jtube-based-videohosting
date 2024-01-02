@@ -8,7 +8,7 @@ const Loading = () => {
 				Видео, которые были опубликованы недавно.
 			</p>
 
-			<div className='grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 mt-6 gap-x-6 gap-y-14'>
+			<div className='videos-container'>
 				{Array.from({length: 12}, (v, i) => (
 					<Skeleton
 						key={i + 1}

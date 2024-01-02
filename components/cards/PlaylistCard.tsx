@@ -19,13 +19,13 @@ const PlaylistCard = ({
 			<NextImage
 				alt={video_title}
 				src={videoPreviewUrl}
-				width='w-[180px] min-w-[180px] max-[1300px]:w-[140px] max-[1300px]:min-w-[140px]'
+				width='w-[180px] min-w-[180px] max-zxc:w-[140px] max-zxc:min-w-[140px]'
 				height='h-[100px]'
 				className='rounded-md object-cover'
 			/>
 			<div>
 				<h3 className='font-semibold'>{video_title}</h3>
-				<div className='flex items-center gap-1.5 mt-3 max-[1300px]:flex-col max-[1300px]:items-start'>
+				<div className='flex items-center gap-1.5 mt-3 max-zxc:flex-col max-zxc:items-start'>
 					<div className='flex items-center gap-1.5 '>
 						<p className='text-neutral-400 text-sm'>{authorUsername}</p>
 						<p className='text-neutral-400 text-sm'>•</p>

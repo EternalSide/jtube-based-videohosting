@@ -76,6 +76,7 @@ const VideoCommentForm = ({
 			if (!userId) {
 				return toast({
 					title: "Войдите, чтобы оставить комментарий",
+					variant: "destructive",
 				});
 			}
 

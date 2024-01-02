@@ -45,7 +45,7 @@ const SearchPage = async ({searchParams}: Params) => {
 					{searchByQuery ? searchByQuery : searchByTag}
 				</span>
 			</p>
-			<div className='grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 mt-6 gap-x-6 gap-y-14'>
+			<div className='videos-container'>
 				{results?.length > 0 ? (
 					results.map((video: any) => (
 						<VideoCardMe

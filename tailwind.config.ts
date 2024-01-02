@@ -16,6 +16,9 @@ const config: Config = {
 			},
 		},
 		extend: {
+			screens: {
+				"zxc": "1300px",
+			},
 			colors: {
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",

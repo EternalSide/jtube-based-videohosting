@@ -11,10 +11,7 @@ const FullScreen = () => {
 			align='center'
 			label='Во весь экран'
 		>
-			<button
-				className='cursor-pointer'
-				onClick={toggleFullscreen}
-			>
+			<button onClick={toggleFullscreen}>
 				<Maximize className='player__icon' />
 			</button>
 		</ActionTooltip>

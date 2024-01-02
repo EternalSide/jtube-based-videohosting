@@ -19,6 +19,7 @@ import {IPlaylist} from "@/database/models/playlist.model";
 import {addVideoInPlaylistDb} from "@/lib/actions/video.action";
 import PlaylistCheck from "../shared/Video/PlaylistCheck";
 import {addNewPlaylistToDB} from "@/lib/actions/playlist.action";
+import Link from "next/link";
 
 const AddInPlaylistModal = () => {
 	const {isOpen, setIsOpen, type, data} = useModal();
@@ -30,6 +31,7 @@ const AddInPlaylistModal = () => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
+		if (!data.currentUserId) return;
 		if (isOpen) {
 			setIsLoading(true);
 
@@ -58,7 +60,8 @@ const AddInPlaylistModal = () => {
 			const name = inputRef?.current.value;
 			if (name.length < 3 || name.length > 50) {
 				return toast({
-					title: "Проверьте длину имени плейлиста.",
+					title: "Имя плейлиста не может быть меньше 3 и больше 50 символов.",
+					variant: "destructive",
 				});
 			}
 			const playlist = await addNewPlaylistToDB({
@@ -76,6 +79,7 @@ const AddInPlaylistModal = () => {
 				},
 				...playlists,
 			]);
+			setIsCreatingNewPlaylist(false);
 			// @ts-ignore
 			inputRef.current.value = "";
 			return toast({
@@ -104,6 +108,32 @@ const AddInPlaylistModal = () => {
 				: `Видео удалено из плейлиста ${playListName}  ✅`,
 		});
 	};
+
+	if (!data.currentUserId) {
+		return (
+			<Dialog
+				open={open}
+				onOpenChange={() => setIsOpen(!isOpen, "addInPlaylist")}
+			>
+				<DialogContent className='!z-[100000]'>
+					<DialogHeader>
+						<DialogTitle className='mb-1.5'>Выберите плейлист</DialogTitle>
+						<DialogDescription className='flex flex-col gap-6 !my-4 text-center'>
+							Вы не авторизованы. <br />
+							Добавление видео в плейлист доступно только для зарегистрированных
+							пользователей.
+						</DialogDescription>
+					</DialogHeader>
+
+					<Link href={"/sign-in"}>
+						<Button className='w-full bg-indigo-600 gap-3'>
+							Страница Авторизации
+						</Button>
+					</Link>
+				</DialogContent>
+			</Dialog>
+		);
+	}
 
 	return (
 		<Dialog

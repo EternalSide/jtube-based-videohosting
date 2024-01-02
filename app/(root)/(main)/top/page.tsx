@@ -22,9 +22,9 @@ const TopPage = async () => {
 					<InfiniteScroll
 						videos={topVideos}
 						page='topPage'
-						containerClassNames='grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 mt-6 gap-x-6 gap-y-14'
-						loadingClassNames='grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 mt-14 gap-x-6 gap-y-14'
-						skeletonLength={4}
+						containerClassNames='videos-container'
+						loadingIcon={true}
+						loadingClassNames='my-10'
 					/>
 				) : (
 					<NotFound />

@@ -53,7 +53,7 @@ const Volume = () => {
 					style={{
 						left: `${(currentVolume as number) * 100}%`,
 					}}
-					className='h-5 w-5 absolute -ml-2  bg-indigo-700 rounded-full shadow cursor-pointer'
+					className='h-5 w-5 absolute -ml-2 bg-indigo-700 rounded-full shadow cursor-pointer'
 				/>
 			</div>
 		</div>

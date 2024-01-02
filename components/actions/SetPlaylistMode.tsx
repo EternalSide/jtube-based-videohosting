@@ -3,6 +3,7 @@ import {Play} from "lucide-react";
 import {Button} from "../ui/button";
 import Link from "next/link";
 import {usePlaylist} from "@/hooks/usePlaylist";
+import {useRouter} from "next/navigation";
 
 const SetPlaylistMode = ({
 	currentVideo,
@@ -11,7 +12,7 @@ const SetPlaylistMode = ({
 	playlistId,
 }: any) => {
 	const {setPlaylistData} = usePlaylist();
-
+	const router = useRouter();
 	const handlePlaylist = () => {
 		setPlaylistData({
 			isPlayListMode: true,
@@ -23,15 +24,16 @@ const SetPlaylistMode = ({
 	};
 
 	return (
-		<Link
-			onClick={handlePlaylist}
-			href={`/video/${currentVideo}/?playlist=${playlistId}`}
+		<Button
+			onClick={() => {
+				handlePlaylist();
+				router.push(`/video/${currentVideo}/?playlist=${playlistId}`);
+			}}
+			className='mt-6 w-full rounded-md bg-white text-black font-semibold gap-1.5 transition hover:opacity-80 max-[1200px]:w-64'
 		>
-			<Button className='mt-10 w-full rounded-md bg-black gap-1.5 transition hover:opacity-80 mr-6'>
-				<Play />
-				Воспроизвести
-			</Button>
-		</Link>
+			<Play />
+			Воспроизвести
+		</Button>
 	);
 };
 export default SetPlaylistMode;
