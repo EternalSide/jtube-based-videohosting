@@ -59,8 +59,8 @@ const VideoCardMe = ({
 					</ActionTooltip>
 					<div className='flex gap-1.5 items-center'>
 						<p className='text-sm text-zinc-400'>{views} просмотров</p>
-						<span className='text-sm text-zinc-400'>·</span>
-						<p className='text-sm text-zinc-400'>{formatDate(date)}</p>
+						{/* <span className='text-sm text-zinc-400'>·</span>
+						<p className='text-sm text-zinc-400'>{formatDate(date)}</p> */}
 					</div>
 				</div>
 			</div>
