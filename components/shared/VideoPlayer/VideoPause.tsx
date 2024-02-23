@@ -6,11 +6,17 @@ const VideoPause = () => {
 	const {isPaused, setIsPaused} = usePlayer();
 	return isPaused ? (
 		<button onClick={() => setIsPaused(false)}>
-			<PlayIcon className='player__icon' />
+			<PlayIcon
+				fill='white'
+				className='player__icon'
+			/>
 		</button>
 	) : (
 		<button onClick={() => setIsPaused(true)}>
-			<PauseIcon className='player__icon' />
+			<PauseIcon
+				fill='white'
+				className='player__icon'
+			/>
 		</button>
 	);
 };

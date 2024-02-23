@@ -474,7 +474,9 @@ export async function getAllVideos(params: any) {
 
 		const {page} = params;
 
-		const skipAmount = (page - 1) * 12;
+		const pageLimit = 12;
+
+		const skipAmount = (page - 1) * pageLimit;
 
 		const videos = await Video.find({})
 			.populate({path: "author"})
@@ -482,7 +484,7 @@ export async function getAllVideos(params: any) {
 				createdAt: -1,
 			})
 			.skip(skipAmount)
-			.limit(12);
+			.limit(pageLimit);
 
 		if (!videos)
 			return {

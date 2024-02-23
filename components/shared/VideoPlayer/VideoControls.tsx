@@ -23,7 +23,9 @@ const VideoControls = ({videoData, isHover, progressBarRef}: Props) => {
 	return (
 		<div
 			ref={progressBarRef}
-			className={`progress-bar ${isHover && "!opacity-100 !visible"}`}
+			className={`progress-bar bg-black/50 ${
+				isHover && "!opacity-100 !visible"
+			}`}
 		>
 			<VideoProgressBar videoUrl={videoData.videoUrl} />
 			<div className='flex px-4 justify-between items-center h-full'>

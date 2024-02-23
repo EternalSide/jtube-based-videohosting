@@ -48,7 +48,7 @@ const VideoProgressBar = ({videoUrl}: Props) => {
 					left: `${style}%`,
 					transform: "translateX(-50%)",
 				}}
-				className={`invisible absolute bottom-[55px] w-64 h-40 ${
+				className={`invisible absolute  bottom-[55px] w-64 h-40 ${
 					isHover && "!visible"
 				}`}
 			>

@@ -34,6 +34,7 @@ export const usePlaylist = create<State>((set) => ({
 		videos: null,
 		randomOrder: false,
 	},
-	setPlaylistData: (playlistData: Partial<PlayListType>) =>
-		set((state) => ({playlist: {...state.playlist, ...playlistData}})),
+	setPlaylistData: (playlistData: Partial<PlayListType>) => {
+		set((state) => ({playlist: {...state.playlist, ...playlistData}}));
+	},
 }));

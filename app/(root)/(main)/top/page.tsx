@@ -20,7 +20,7 @@ const TopPage = async () => {
 			<div className=''>
 				{topVideos?.length > 0 ? (
 					<InfiniteScroll
-						videos={topVideos}
+						initialVideos={topVideos}
 						page='topPage'
 						containerClassNames='videos-container'
 						loadingIcon={true}

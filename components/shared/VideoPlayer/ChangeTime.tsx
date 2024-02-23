@@ -14,7 +14,10 @@ const ChangeTime = ({children}: ChildrenProps) => {
 				label='Назад на 15 сек'
 			>
 				<button onClick={() => handleChangeTime("back")}>
-					<StepBack className='player__icon' />
+					<StepBack
+						fill='white'
+						className='player__icon'
+					/>
 				</button>
 			</ActionTooltip>
 			{children}
@@ -24,7 +27,10 @@ const ChangeTime = ({children}: ChildrenProps) => {
 				label='Вперед на 15 сек'
 			>
 				<button onClick={() => handleChangeTime("forward")}>
-					<StepForward className='player__icon' />
+					<StepForward
+						fill='white'
+						className='player__icon'
+					/>
 				</button>
 			</ActionTooltip>
 		</>

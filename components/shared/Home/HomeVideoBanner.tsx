@@ -102,7 +102,7 @@ const HomeVideoBanner = ({
 
 			<div
 				ref={progressBarRef}
-				className={`h-4 absolute bottom-0 left-0 w-full  z-50`}
+				className={`h-5 absolute -bottom-0.5 left-0 w-full  z-50`}
 			>
 				<div onClick={(e) => handleProgressBarClick(e)}>
 					<button

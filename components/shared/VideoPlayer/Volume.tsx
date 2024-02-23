@@ -21,9 +21,15 @@ const Volume = () => {
 		>
 			<button onClick={(e) => handleMuteVolume(e)}>
 				{volumeMuted ? (
-					<VolumeXIcon className='volume-icon' />
+					<VolumeXIcon
+						fill='white'
+						className='volume-icon'
+					/>
 				) : (
-					<Volume2Icon className='volume-icon' />
+					<Volume2Icon
+						fill='white'
+						className='volume-icon'
+					/>
 				)}
 			</button>
 			<div

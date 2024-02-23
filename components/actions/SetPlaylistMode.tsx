@@ -1,7 +1,7 @@
 "use client";
 import {Play} from "lucide-react";
 import {Button} from "../ui/button";
-import Link from "next/link";
+
 import {usePlaylist} from "@/hooks/usePlaylist";
 import {useRouter} from "next/navigation";
 
