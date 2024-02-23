@@ -6,7 +6,7 @@ import {usePathname} from "next/navigation";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import Image from "next/image";
 import Link from "next/link";
-import {useOutSideClick} from "shinigami";
+import useOutSideClick from "@/hooks/useOutSideClick";
 
 const Notifications = ({notifications}: any) => {
 	const [isOpen, setIsOpen] = useState(false);

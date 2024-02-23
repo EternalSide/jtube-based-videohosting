@@ -12,7 +12,7 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {Form, FormControl, FormField, FormItem} from "@/components/ui/form";
 import {addReplyToComment} from "@/lib/actions/comment.action";
 import {commentSchema} from "@/lib/validation";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 interface Props {
 	userPicture?: string;

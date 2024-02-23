@@ -4,7 +4,7 @@ import {getUserPlaylists} from "@/lib/actions/user.action";
 import {auth} from "@clerk/nextjs";
 import Link from "next/link";
 import {redirect} from "next/navigation";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 const PlayListsPage = async () => {
 	const {userId} = auth();

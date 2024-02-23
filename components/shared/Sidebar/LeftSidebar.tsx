@@ -6,7 +6,7 @@ import {IUser} from "@/database/models/user.model";
 import {usePathname} from "next/navigation";
 import {menuLinks} from "@/constants";
 import {MenuLink} from "@/constants/types/index.shared";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 interface Props {
 	username: string;

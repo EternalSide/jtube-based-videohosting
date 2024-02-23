@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ActionTooltip from "../shared/ActionTooltip";
 import {formatDate} from "@/lib/utils";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 interface Props {
 	date: Date;

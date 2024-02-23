@@ -3,7 +3,7 @@ import FollowAction from "@/components/actions/FollowAction";
 import WatchLaterAction from "@/components/actions/WatchLaterAction";
 import LikeAction from "@/components/actions/LikeAction";
 import CopyAction from "@/components/actions/CopyAction";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 import OpenPlaylistModalAction from "@/components/actions/OpenPlaylistModalAction";
 
 interface VideoHeaderProps {

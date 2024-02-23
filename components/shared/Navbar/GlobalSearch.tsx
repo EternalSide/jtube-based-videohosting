@@ -1,11 +1,11 @@
 "use client";
 import {Input} from "@/components/ui/input";
-import {Frown, Loader2Icon, Search, X} from "lucide-react";
+import {Frown, Search, X} from "lucide-react";
 import {usePathname, useRouter} from "next/navigation";
 import {useEffect, useRef, useState} from "react";
 import {globalSearch} from "@/lib/actions/general.action";
 import SearchCard from "./Search/SearchCard";
-import {useOutSideClick} from "shinigami";
+import useOutSideClick from "@/hooks/useOutSideClick";
 
 const GlobalSearch = () => {
 	const [searchValue, setSearchValue] = useState("");

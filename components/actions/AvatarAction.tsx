@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {useEdgeStore} from "@/lib/edgestore";
 import {uploadUserAvatar} from "@/lib/actions/user.action";
 import {usePathname} from "next/navigation";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 import UploadImageModal from "../modals/UploadImageModal";
 
 interface Props {

@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {useEdgeStore} from "@/lib/edgestore";
 import {handleUserBg} from "@/lib/actions/user.action";
 import {usePathname} from "next/navigation";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 import UploadImageModal from "@/components/modals/UploadImageModal";
 
 interface Props {

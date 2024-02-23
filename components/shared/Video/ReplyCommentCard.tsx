@@ -9,7 +9,7 @@ import {
 } from "@/lib/actions/comment.action";
 import {usePathname} from "next/navigation";
 import {useToast} from "@/components/ui/use-toast";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 const ReplyCommentCard = ({
 	userName,

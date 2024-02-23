@@ -19,7 +19,7 @@ import ActionTooltip from "../ActionTooltip";
 import {Button} from "@/components/ui/button";
 import VideoCommentForm from "./VideoCommentForm";
 import MoreComments from "./MoreComments";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 interface Props {
 	userPicture: string;

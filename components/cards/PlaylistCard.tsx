@@ -1,6 +1,6 @@
 import {formatDate} from "@/lib/utils";
 import Link from "next/link";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 const PlaylistCard = ({
 	id,

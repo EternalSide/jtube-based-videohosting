@@ -4,7 +4,7 @@ import {Check, ChevronsUp} from "lucide-react";
 import {useRef, useState} from "react";
 import ActionTooltip from "../ActionTooltip";
 import {usePlayer} from "@/hooks/usePlayer";
-import {useOutSideClick} from "shinigami";
+import useOutSideClick from "@/hooks/useOutSideClick";
 
 const VideoSpeed = () => {
 	const [activeSpeedValue, setActiveSpeedValue] = useState(1);

@@ -4,7 +4,7 @@ import {cn, findAndInspectPlaylistOrder} from "@/lib/utils";
 import {Play} from "lucide-react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 const VideoRecommended = ({item, playListMode, playlistId}: any) => {
 	const pathname = usePathname();

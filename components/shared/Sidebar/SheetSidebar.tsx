@@ -7,7 +7,7 @@ import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {menuLinks} from "@/constants";
 import {useEffect} from "react";
-import {NextImage} from "shinigami";
+import NextImage from "@/components/shared/NextImage";
 
 interface Props {
 	username: string;
