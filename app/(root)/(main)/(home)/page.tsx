@@ -36,7 +36,7 @@ const Home = async () => {
 					<h3 className='font-semibold text-4xl text-indigo-500'>Все</h3>
 
 					<InfiniteScroll
-						initialVideos={allVideos}
+						videos={allVideos}
 						page='all'
 						containerClassNames='grid 2xl:grid-cols-4 md:grid-cols-2 mx-auto gap-6 px-3 mt-6'
 						loadingClassNames='grid 2xl:grid-cols-4 md:grid-cols-2 mx-auto gap-6 px-3 mt-6'
